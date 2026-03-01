@@ -22,12 +22,12 @@ export interface AuthResponse {
 class AuthService {
   async login(credentials: LoginCredentials): Promise<AuthResponse> {
     const response = await api.post<AuthResponse>('/auth/login', credentials);
-    
+
     if (response.data.token) {
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
     }
-    
+
     return response.data;
   }
 
@@ -42,6 +42,11 @@ class AuthService {
       return JSON.parse(userStr);
     }
     return null;
+  }
+
+  setToken(token: string) {
+    console.log('Guardando token:', token);
+    localStorage.setItem('token', token);
   }
 
   getToken(): string | null {
