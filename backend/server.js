@@ -11,10 +11,7 @@ app.use(express.json());
 // Importar rutas
 const authRoutes = require('./src/routes/auth.routes');
 
-// Ruta auth
-app.use('/api/auth', authRoutes);  // Esto crea /api/auth/login
-
-// Ruta ticket
+// Usar rutas
 app.use('/api/auth', authRoutes);
 app.use('/api/tickets', ticketRoutes);
 
