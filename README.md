@@ -48,15 +48,16 @@ A comprehensive full-stack ticketing system designed for IT support management. 
 ## 🔐 Demo Credentials
 
 - Admin: admin@helpdesk.com / admin123
-- Technician: tecnico@helpdesk.com / tecnico123
-- Employee: empleado@empresa.com / empleado123
+- Technician: technician@helpdesk.com / technician123
+- Employee: employee@company.com / employee123
 
 ## 📁 Project Structure
-
+```text
 helpdesk-system/
 ├── backend/ # Node.js + Express API
 ├── frontend/ # React + TypeScript app
 └── docs/ # Documentation
+```
 
 ## 🤝 Contributing
 
@@ -69,3 +70,4 @@ MIT License - feel free to use this project for learning purposes.
 ## 👩‍💻 Developer
 
 Developed by Daniela Quijano as a portfolio project.
+
