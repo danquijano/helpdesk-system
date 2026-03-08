@@ -11,19 +11,19 @@ const users = [
   },
   {
     id: 2,
-    name: "Técnico IT",
-    email: "tecnico@helpdesk.com",
-    password: "tecnico123",
-    role: "tecnico",
+    name: "IT Technician",
+    email: "technician@helpdesk.com",
+    password: "technician123",
+    role: "technician",
     department: "IT"
   },
   {
     id: 3,
-    name: "Empleado Regular",
-    email: "empleado@empresa.com",
-    password: "empleado123",
-    role: "empleado",
-    department: "Ventas"
+    name: "Regular Employee",
+    email: "employee@company.com",
+    password: "employee123",
+    role: "employee",
+    department: "Sales"
   }
 ];
 

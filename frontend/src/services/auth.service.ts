@@ -39,7 +39,9 @@ class AuthService {
   getCurrentUser(): User | null {
     const userStr = localStorage.getItem('user');
     if (userStr) {
-      return JSON.parse(userStr);
+      const user = JSON.parse(userStr);
+      console.log('Current user:', user); // Debug: check if name exists
+      return user;
     }
     return null;
   }
