@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const ticketRoutes = require('./src/routes/ticket.routes');
+const statsRoutes = require('./src/routes/stats.routes');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -17,6 +18,7 @@ app.use('/api/auth', authRoutes);  // Esto crea /api/auth/login
 // Ruta ticket
 app.use('/api/auth', authRoutes);
 app.use('/api/tickets', ticketRoutes);
+app.use('/api/stats', statsRoutes);
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);

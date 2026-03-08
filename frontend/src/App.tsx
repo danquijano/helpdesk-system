@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import TicketsList from './pages/TicketsList';
 import CreateTicket from './pages/CreateTicket';
+import TicketDetail from './pages/TicketDetail';
 import authService from './services/auth.service';
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
         <Route path="/tickets" element={<PrivateRoute><TicketsList /></PrivateRoute>} />
         <Route path="/tickets/new" element={<PrivateRoute><CreateTicket /></PrivateRoute>} />
+        <Route path="/tickets/:id" element={<PrivateRoute><TicketDetail /></PrivateRoute>} />
         <Route path="/" element={<Navigate to="/dashboard" />} />
       </Routes>
     </BrowserRouter>
