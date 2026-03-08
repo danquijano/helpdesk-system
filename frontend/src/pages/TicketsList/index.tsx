@@ -61,7 +61,7 @@ const TicketsList: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Navbar />
-      
+
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold">Support Tickets</h1>
@@ -81,11 +81,10 @@ const TicketsList: React.FC = () => {
             <button
               key={status}
               onClick={() => setFilter(status)}
-              className={`px-3 py-1 rounded ${
-                filter === status 
-                  ? 'bg-blue-500 text-white' 
+              className={`px-3 py-1 rounded ${filter === status
+                  ? 'bg-blue-500 text-white'
                   : 'bg-white text-gray-700 hover:bg-gray-50'
-              }`}
+                }`}
             >
               {status.charAt(0).toUpperCase() + status.slice(1)}
             </button>
@@ -105,7 +104,7 @@ const TicketsList: React.FC = () => {
             filteredTickets.map(ticket => (
               <div
                 key={ticket.id}
-                onClick={() => navigate(`/tickets/${ticket.id}`)}
+                onClick={() => navigate(`/tickets/${ticket.id}`)}  
                 className="border-b p-4 hover:bg-gray-50 cursor-pointer"
               >
                 <div className="flex justify-between items-start">

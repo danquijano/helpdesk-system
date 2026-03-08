@@ -4,6 +4,7 @@ const authMiddleware = (req, res, next) => {
   // Silmulacion de un usuario autenticado
   req.user = {
     id: 1,
+    name: "Admin User", 
     email: "admin@helpdesk.com",
     role: "admin"
   };
